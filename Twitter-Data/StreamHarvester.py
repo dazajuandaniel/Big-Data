@@ -12,8 +12,6 @@ import sys, json
 import tweepy as tw
 from tweepy import OAuthHandler, Stream
 from tweepy.streaming import StreamListener
-import pymongo
-from pymongo import MongoClient
 import TwitterSentiment as ts
 
 #Twitter Configuration
@@ -22,9 +20,7 @@ auth.set_access_token(secret.ACCESS_TOKEN, secret.ACCESS_SECRET)
 api = tw.API(auth)
 
 #Database Config
-client = MongoClient('mongodb://13.82.106.113:27017/')
-db = client.twitter
-collection = db.tweets
+collection = app_config.MongoClient()
 
 class StdOutListener(StreamListener):
     def on_data(self, data):
