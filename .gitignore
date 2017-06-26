@@ -104,3 +104,4 @@ ENV/
 .vscode
 secret.py
 .pyc
+.ipynb
