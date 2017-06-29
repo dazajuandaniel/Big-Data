@@ -4,6 +4,7 @@ import sys
 #Database
 import pymongo
 from pymongo import MongoClient
+import secret
 
 #Logging
 def setup_custom_logger(name,fileLocation):

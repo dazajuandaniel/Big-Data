@@ -105,3 +105,9 @@ ENV/
 secret.py
 .pyc
 .ipynb
+Hadoop/.metadata
+Hadoop/Hadoop Definite Guide/.settings
+Hadoop/Hadoop Definite Guide/bin
+Hadoop/Hadoop Definite Guide/.classpath
+Hadoop/Hadoop Definite Guide/.gitignore
+Hadoop/Hadoop Definite Guide/.project
