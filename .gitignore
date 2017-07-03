@@ -100,14 +100,18 @@ ENV/
 # mypy
 .mypy_cache/
 
+#Flask
+Twitter-Data/flask_app/web_app/instance
 # other
 .vscode
 secret.py
 .pyc
 .ipynb
 Hadoop/.metadata
+Hadoop/.recommenders
 Hadoop/Hadoop Definite Guide/.settings
 Hadoop/Hadoop Definite Guide/bin
 Hadoop/Hadoop Definite Guide/.classpath
 Hadoop/Hadoop Definite Guide/.gitignore
 Hadoop/Hadoop Definite Guide/.project
+Twitter-Data/aurin_data

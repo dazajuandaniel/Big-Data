@@ -20,7 +20,12 @@ coord_list=[]
 f = open(r'C:\Users\User\Desktop\CCC Tweets\bigTwitter.json',"r")
 objects = ijson.items(f,'item.json')
 for ind,it in enumerate(objects):
-    #if ind < 1:
+    #try 60000 to 80000
+    #try 100000 to 250000
+    if ind < 331284:
+        continue
+    if ind == 331290:
+        logger.info('Ok')
     tweet_ = it
     clean_tweet_text=TwitterSentiment.processTweet(tweet_['text'])
     try:
@@ -35,9 +40,13 @@ for ind,it in enumerate(objects):
     except Exception as e:
         logger.error(e)
 
-    for index,item in enumerate(tweet_['place']['bounding_box']['coordinates'][0]):
-        tweet_['place']['bounding_box']['coordinates'][0][index][0]=float(it['place']['bounding_box']['coordinates'][0][index][0])
-        tweet_['place']['bounding_box']['coordinates'][0][index][1]=float(it['place']['bounding_box']['coordinates'][0][index][1])       
+    try:
+        for index,item in enumerate(tweet_['place']['bounding_box']['coordinates'][0]):
+            tweet_['place']['bounding_box']['coordinates'][0][index][0]=float(it['place']['bounding_box']['coordinates'][0][index][0])
+            tweet_['place']['bounding_box']['coordinates'][0][index][1]=float(it['place']['bounding_box']['coordinates'][0][index][1])
+    except Exception as e:
+        logger.error(e)
+
 
     sentiment=TwitterSentiment.getSentiment(clean_tweet_text)
     tweet_['sentiment']=sentiment
@@ -46,7 +55,7 @@ for ind,it in enumerate(objects):
     #print it
     try:
         collection.insert_one(tweet_)
-        logger.info('Wrote Tweet Succesfully')
+        #logger.info('Wrote Tweet Succesfully, '+str(ind))
     except Exception as e:
-        logger.error('Error Ocurred Database Write')
+        logger.error('Error Ocurred Database Write, '+str(ind))
         logger.error(e)
