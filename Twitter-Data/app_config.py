@@ -22,7 +22,7 @@ def setup_custom_logger(name,fileLocation):
     return logger
 
 #Database
-def MongoConnection(host = 'localhost',db,collection):
+def MongoConnection(db,collection,host = 'localhost'):
     client = MongoClient(host)
     db = client.twitter_db
     collection = db.twitter
