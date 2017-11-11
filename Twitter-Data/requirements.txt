@@ -1,6 +1,2 @@
 tweepy
 
-textblob
-
-pymongo
-jsonpickle

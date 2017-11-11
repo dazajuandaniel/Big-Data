@@ -100,13 +100,16 @@ ENV/
 # mypy
 .mypy_cache/
 
-#Flask
-Twitter-Data/flask_app/web_app/instance
+#Twitter Project Folders
+Twitter-Data/logs
+app_config.py
+
 # other
 .vscode
-secret.py
 .pyc
 .ipynb
+
+# Hadoop folder
 Hadoop/.metadata
 Hadoop/.recommenders
 Hadoop/Hadoop Definite Guide/.settings
