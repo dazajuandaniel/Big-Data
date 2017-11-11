@@ -7,6 +7,7 @@ Each folder has a specific project that I am currently doing.
 
 # Folder Structure
     .
-    ├── Twitter-Data            # Using a MongoDB and various harvesters, I tried to capture as much data as possible to then create a Flask App to visualize it using the Hadoop framework
-    ├── Coursera                # I am currently doing the Big Data specialization. This repo will host all of my code
+    ├── Twitter-Data            # An end-to-end Data Warehouse solution for Real Time Data Processing using Twitter's API, Python, Kafka, NoSQL and SQL.
+    ├── Hadoop                  # Code and Tutorials done for the Hadoop Ecosystem. Includes Coursera code and Books I'm reading.
+    ├── Learning Notes          # Markdowns of notes I take whilst learning the different technologies.
     └── README.md
