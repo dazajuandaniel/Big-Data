@@ -12,14 +12,11 @@ CONSUMER_SECRET_UNI = 'I3SX0m3UAXCK91LVIHj3NpZlLXfukYybZXYSZhrPEG5zuoOPw8'
 ACCESS_TOKEN_UNI = '877752456838381573-0hMJuQTKZ1yCA0TfoU78HF8vDDxoE8I'
 ACCESS_SECRET_UNI = 'HhuZ6dEtsvilSgIxeEYU1TtVjLMs178CpgvuVcdU3umfi'
 
-#Keyword List
+# Keyword List
 WORDS = ['australia','melbourne','colombia']
 
-#Database
-HOST='mongodb://13.82.106.113:27017/'
-DB = 'twitter_db'
-COLLECTION = 'twitter'
-FILE_ADDRESS = r'C:\Users\dazaj\Documents\Melbourne Uni\CCC Tweets\bigTwitter.json'
+# Kafka
+KAFKA_PORT = 'localhost:9092'
 
 #Logging
 def custom_logger(name,fileLocation):
@@ -34,10 +31,3 @@ def custom_logger(name,fileLocation):
     logger.addHandler(handler)
     logger.addHandler(screen_handler)
     return logger
-
-#Database
-def MongoConnection(db,collection,host = 'localhost'):
-    client = MongoClient(host)
-    db = client.twitter_db
-    collection = db.twitter
-    return collection
