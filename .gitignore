@@ -103,6 +103,7 @@ ENV/
 #Twitter Project Folders
 Twitter-Data/logs
 app_config.py
+Twitter-Data/security
 
 # other
 .vscode
